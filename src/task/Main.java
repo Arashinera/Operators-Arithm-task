@@ -38,7 +38,7 @@ public class Main {
     static double price;
     static int sales;
     static int days;
-    static double count;
+    static double totalSales;
     static double average;
 
     public static void main(String[] args) {
@@ -58,13 +58,13 @@ public class Main {
         days = input.nextInt();
 
         //Рахуємо суму та середньоденний продаж для першого замовлення :
-        count = price * sales;
-        average = count / days;
+        totalSales = price * sales;
+        average = totalSales / days;
 
         //Виводимо замовлення на екран :
         System.out.printf("Product №1: %s%n"
                 + "total sales for %d days is %s %.2f,%n"
-                + "sales by day is %s %.2f.%n%n", name, days, CURRENCY, count, CURRENCY, average);
+                + "sales by day is %s %.2f.%n%n", name, days, CURRENCY, totalSales, CURRENCY, average);
 
         //Очищуємо сканер переносом строки для переходу з Integer на String :
         input.nextLine();
@@ -80,12 +80,12 @@ public class Main {
         days = input.nextInt();
 
         //Рахуємо суму та середньоденний продаж для другого замовлення :
-        count = price * sales;
-        average = count / days;
+        totalSales = price * sales;
+        average = totalSales / days;
 
         //Виводимо замовлення на екран :
         System.out.printf("Product №2: %s%n"
                 + "total sales for %d days is %s %.2f,%n"
-                + "sales by day is %s %.2f.%n", name, days, CURRENCY, count, CURRENCY, average);
+                + "sales by day is %s %.2f.%n", name, days, CURRENCY, totalSales, CURRENCY, average);
     }
 }
