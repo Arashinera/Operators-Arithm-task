@@ -31,6 +31,8 @@ public class Main {
 //    Для округлення значень розрахункових сум можете скористатись
 //    можливостями System.out.printf().
 
+
+    //Створюємо статичні змінні :
     public static final String CURRENCY = "EUR";
     static String name;
     static double price;
@@ -41,9 +43,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Налаштовуємо наш сканер та локейл :
         Scanner input = new Scanner(System.in);
         input.useLocale(Locale.ENGLISH);
 
+        //Перше замовлення :
         System.out.println("Order №1. Please, tell me the name product : ");
         name = input.nextLine();
         System.out.println("Please, tell me " + name + "'s price : ");
@@ -53,15 +57,19 @@ public class Main {
         System.out.println("Please, tell me how many days you've been selling " + name + "s?");
         days = input.nextInt();
 
+        //Рахуємо суму та середньоденний продаж для першого замовлення :
         count = price * sales;
         average = count / days;
 
+        //Виводимо замовлення на екран :
         System.out.printf("Product №1: %s%n"
                 + "total sales for %d days is %s %.2f,%n"
                 + "sales by day is %s %.2f.%n%n", name, days, CURRENCY, count, CURRENCY, average);
 
+        //Очищуємо сканер переносом строки для переходу з Integer на String :
         input.nextLine();
 
+        //Друге замовлення :
         System.out.println("Order №2. Please, tell me the name product : ");
         name = input.nextLine();
         System.out.println("Please, tell me " + name + "'s price : ");
@@ -71,9 +79,11 @@ public class Main {
         System.out.println("Please, tell me how many days you've been selling " + name + "s?");
         days = input.nextInt();
 
+        //Рахуємо суму та середньоденний продаж для другого замовлення :
         count = price * sales;
         average = count / days;
 
+        //Виводимо замовлення на екран :
         System.out.printf("Product №2: %s%n"
                 + "total sales for %d days is %s %.2f,%n"
                 + "sales by day is %s %.2f.%n", name, days, CURRENCY, count, CURRENCY, average);
